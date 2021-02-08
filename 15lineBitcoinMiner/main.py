@@ -1,6 +1,6 @@
 from hashlib import sha256 #e destul de evident ca fara libraria asta nu avem hash-ul, nu?
 MAX_NONCE = 100000000000 #un numar exorbitant de incercari maxime, aici umbli daca stii ca dificultatea va fi ridicola sau infima
-
+#nonce mai este cunoscut si drept proof of work, numarul nostru de iteratii practic
 def SHA256(text): #este o scurtare a scrisului, pare a functie de dragul de a avea functii, dar e gandita pentru claritate
     return sha256(text.encode("ascii")).hexdigest() #in acest mic return, se intampla magia obtinerii unui potential hash, luam text-ul, trecut in ascii si apoi folosim pe el hexdigest, la care ii generam sha-ul, ta-dah, am obtinut un hash de 256 de biti/64 hexadecimali
 
